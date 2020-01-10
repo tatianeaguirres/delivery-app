@@ -1,12 +1,12 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Delivery App</h1>
     </div>
-  );
+  )
 }
 
 export default App
