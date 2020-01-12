@@ -1,0 +1,28 @@
+{
+  "deliveries": [
+    {
+      "id": 1,
+      "countryPickup": "netherlands",
+      "addressPickup": "address",
+      "countryDelivery": "netherlands",
+      "addressDelivery": "address",
+      "typeGoods": "plastic",
+      "volume": "box",
+      "volumeQuantity": "2",
+      "lenght": "120",
+      "width": "180",
+      "height": "240",
+      "weight": "20",
+      "pickupDate": "2018-10-12",
+      "pickupTime": {
+        "start": "8:00",
+        "end": "18:30"
+      },
+      "deliveryDate": "2018-10-10",
+      "deliveryTime": {
+        "start": "8:00",
+        "end": "18:30"
+      }
+    }
+  ]
+}
