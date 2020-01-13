@@ -24,6 +24,7 @@ const NewDelivery = () => {
     start: '08:00',
     end: '18:30'
   })
+  const [isSent, setIsSent] = useState(false)
 
   const submit = event => {
     event.preventDefault()
@@ -50,7 +51,7 @@ const NewDelivery = () => {
         deliveryDate,
         deliveryTime
       })
-    })
+    }).then(() => setIsSent(true))
   }
 
   return (
@@ -346,6 +347,9 @@ const NewDelivery = () => {
             role='button'
             tabindex='0'
           />
+          {isSent && (
+            <p className='form__submit-message'>Thank you for your input!</p>
+          )}
         </div>
       </form>
       {/* TODO */}
