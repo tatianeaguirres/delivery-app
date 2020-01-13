@@ -10,6 +10,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "json-server": "^0.15.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
