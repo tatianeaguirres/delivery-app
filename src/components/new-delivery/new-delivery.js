@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TimeRangeSlider from 'react-time-range-slider'
 import './new-delivery.scss'
+import FormRoute from '../form-route/form-route'
 
 const NewDelivery = () => {
   const [countryPickup, setCountryPickup] = useState('')
@@ -25,6 +26,10 @@ const NewDelivery = () => {
     end: '18:30'
   })
   const [isSent, setIsSent] = useState(false)
+
+  const handleInputChange = (event, setValue) => {
+    setValue(event.target.value)
+  }
 
   const submit = event => {
     event.preventDefault()
@@ -59,73 +64,20 @@ const NewDelivery = () => {
   return (
     <div className='new-delivery'>
       <form className='form' onSubmit={submit}>
-        <section className='form__section' id='route'>
-          <h2 className='form__title'>Route</h2>
-          <div className='form__row'>
-            <label className='form__label' htmlFor='addressPickup'>
-              Pickup
-            </label>
-            <select
-              className='form__select'
-              name='countryPickup'
-              id='countryPickup'
-              aria-label='click here to select the pickup country'
-              onChange={event => setCountryPickup(event.target.value)}
-            >
-              <option className='form__option' value='netherlands'>
-                Netherlands
-              </option>
-              <option className='form__option' value='belgium'>
-                Belgium
-              </option>
-              <option className='form__option' value='germany'>
-                Germany
-              </option>
-            </select>
-            <input
-              className='form__input'
-              type='text'
-              placeholder='Address'
-              id='addressPickup'
-              name='addressPickup'
-              value={addressPickup}
-              onChange={event => setAddressPickup(event.target.value)}
-              required
-            />
-          </div>
-          <div className='form__row'>
-            <label className='form__label' htmlFor='countryDelivery'>
-              Delivery
-            </label>
-            <select
-              className='form__select'
-              name='countryDelivery'
-              id='countryDelivery'
-              aria-label='click here to select the delivery country'
-              onChange={event => setCountryDelivery(event.target.value)}
-            >
-              <option className='form__option' value='netherlands'>
-                Netherlands
-              </option>
-              <option className='form__option' value='belgium'>
-                Belgium
-              </option>
-              <option className='form__option' value='germany'>
-                Germany
-              </option>
-            </select>
-            <input
-              className='form__input'
-              type='text'
-              placeholder='Address'
-              id='addressDelivery'
-              name='addressDelivery'
-              value={addressDelivery}
-              onChange={event => setAddressDelivery(event.target.value)}
-              required
-            />
-          </div>
-        </section>
+        <FormRoute
+          onCountryPickup={event => handleInputChange(event, setCountryPickup)}
+          countryPickup={countryPickup}
+          onAddressPickup={event => handleInputChange(event, setAddressPickup)}
+          addressPickup={addressPickup}
+          onCountryDelivery={event =>
+            handleInputChange(event, setCountryDelivery)
+          }
+          countryDelivery={countryDelivery}
+          onAddressDelivery={event =>
+            handleInputChange(event, setAddressDelivery)
+          }
+          addressDelivery={addressDelivery}
+        />
         <section className='form__section' id='freight-details'>
           <h2 className='form__title'>Freight Details</h2>
           <label className='form__label-top' htmlFor='typeGoods'>
@@ -347,7 +299,7 @@ const NewDelivery = () => {
             id='submit'
             value='Submit'
             role='button'
-            tabindex='0'
+            tabIndex='0'
           />
           {isSent && (
             <p className='form__submit-message'>Thank you for your input!</p>
