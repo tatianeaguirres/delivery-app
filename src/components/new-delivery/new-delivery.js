@@ -51,7 +51,9 @@ const NewDelivery = () => {
         deliveryDate,
         deliveryTime
       })
-    }).then(() => setIsSent(true))
+    })
+      .then(() => setIsSent(true))
+      .catch(() => alert('There was an error, please try again'))
   }
 
   return (
