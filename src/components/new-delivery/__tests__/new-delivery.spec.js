@@ -19,12 +19,6 @@ describe('<NewDelivery/>', () => {
     expect(getByLabelText('Delivery Date')).toBeInTheDocument()
   })
 
-  it('renders select', () => {
-    const { getByDisplayValue } = render(<NewDelivery />)
-
-    expect(getByDisplayValue('Palet')).toBeInTheDocument()
-  })
-
   it('renders button', () => {
     const { getByRole } = render(<NewDelivery />)
 
