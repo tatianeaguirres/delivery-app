@@ -152,26 +152,6 @@
   }
 }
 
-.input-range {
-  &__slider {
-    background: $dark-gray-color;
-    border: 1px solid $dark-gray-color;
-    height: 0.7rem;
-    margin-left: -0.8rem;
-    margin-top: -0.5rem;
-    width: 0.7rem;
-  }
-
-  &__track {
-    height: 0.2rem;
-    background: $light-gray-color;
-
-    &--active {
-      background: $dark-gray-color;
-    }
-  }
-}
-
 .map {
   background-color: $light-gray-color;
   width: 40vw;

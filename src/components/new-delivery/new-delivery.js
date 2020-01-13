@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
-import TimeRangeSlider from 'react-time-range-slider'
 import './new-delivery.scss'
 import FormRoute from '../form-route/form-route'
 import FormFreight from '../form-freight/form-freight'
+import FormDate from '../form-date/form-date'
 
 const NewDelivery = () => {
-  const [countryPickup, setCountryPickup] = useState('')
+  const [countryPickup, setCountryPickup] = useState('netherlands')
   const [addressPickup, setAddressPickup] = useState('')
-  const [countryDelivery, setCountryDelivery] = useState('')
+  const [countryDelivery, setCountryDelivery] = useState('netherlands')
   const [addressDelivery, setAddressDelivery] = useState('')
   const [typeGoods, setTypeGoods] = useState('')
-  const [volume, setVolume] = useState('')
-  const [volumeQuantity, setVolumeQuantity] = useState('')
+  const [volume, setVolume] = useState('palet')
+  const [volumeQuantity, setVolumeQuantity] = useState('1')
   const [lenght, setLenght] = useState('')
   const [width, setWidth] = useState('')
   const [height, setHeight] = useState('')
@@ -97,71 +97,16 @@ const NewDelivery = () => {
           onWeight={event => handleInputChange(event, setWeight)}
           weight={weight}
         />
-        <section className='form__section' id='date-time'>
-          <h2 className='form__title'>Date & Time</h2>
-          <div className='form__row'>
-            <label className='form__label' htmlFor='pickupDate'>
-              Pickup Date
-            </label>
-            <input
-              className='form__date-input'
-              type='date'
-              id='pickupDate'
-              name='pickupDate'
-              value={pickupDate}
-              onChange={event => setPickupDate(event.target.value)}
-              required
-            />
-            <div className='form__time-input'>
-              <div className='form__time-label'>
-                <label>{pickupTime.start} </label>
-                <label>{pickupTime.end}</label>
-              </div>
-              <TimeRangeSlider
-                disabled={false}
-                format={24}
-                maxValue={'23:30'}
-                minValue={'02:00'}
-                name={'pickupTime'}
-                id={'pickupTime'}
-                onChange={event => setPickupTime(event)}
-                step={15}
-                value={pickupTime}
-              />
-            </div>
-          </div>
-          <div className='form__row'>
-            <label className='form__label' htmlFor='deliveryDate'>
-              Delivery Date
-            </label>
-            <input
-              className='form__date-input'
-              type='date'
-              id='deliveryDate'
-              name='deliveryDate'
-              value={deliveryDate}
-              onChange={event => setDeliveryDate(event.target.value)}
-              required
-            />
-            <div className='form__time-input'>
-              <div className='form__time-label'>
-                <label>{deliveryTime.start} </label>
-                <label>{deliveryTime.end}</label>
-              </div>
-              <TimeRangeSlider
-                disabled={false}
-                format={24}
-                maxValue={'23:30'}
-                minValue={'02:00'}
-                name={'deliveryTime'}
-                id={'deliveryTime'}
-                onChange={event => setDeliveryTime(event)}
-                step={15}
-                value={deliveryTime}
-              />
-            </div>
-          </div>
-        </section>
+        <FormDate
+          onPickupDate={event => handleInputChange(event, setPickupDate)}
+          pickupDate={pickupDate}
+          onPickupTime={event => handleInputChange(event, setPickupTime)}
+          pickupTime={pickupTime}
+          onDeliveryDate={event => handleInputChange(event, setDeliveryDate)}
+          deliveryDate={deliveryDate}
+          onDeliveryTime={event => handleInputChange(event, setDeliveryTime)}
+          deliveryTime={deliveryTime}
+        />
         <div className='form__submit'>
           <input
             className='form__submit-button'
