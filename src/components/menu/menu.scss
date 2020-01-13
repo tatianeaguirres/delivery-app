@@ -31,22 +31,29 @@
   }
 
   &__item {
-    padding: 5% 0 5% 8%;
-
-    &--active {
-      padding: 5% 0 5% 8%;
-      background-color: $active-color;
-    }
-
     &-link {
       display: flex;
       align-items: center;
       text-decoration: none;
       color: $light-font-color;
+      width: 15vw;
+      height: 3.5rem;
+      margin-bottom: 0.5rem;
 
-      .material-icons {
-        margin-right: 2%;
+      &--active {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $light-font-color;
+        width: 15vw;
+        height: 3.5rem;
+        margin-bottom: 0.5rem;
+        background-color: $active-color;
       }
+    }
+
+    .material-icons {
+      margin: 0 2% 0 8%;
     }
   }
 }
