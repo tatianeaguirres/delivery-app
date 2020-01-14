@@ -9,11 +9,12 @@
   width: 45vw;
   height: 84vh;
   margin-left: 15vw;
-  margin-top: 10vh;
+  margin-top: 7vh;
   padding: 2%;
 
   &__section {
     border: 1px solid $border-color;
+    background-color: $background-color;
     padding: 4% 4% 2%;
     margin-bottom: 3%;
     border-radius: 4px;
@@ -28,7 +29,7 @@
   &__row {
     display: flex;
     align-items: center;
-    margin: 0 0 2% 3%;
+    margin: 0 0 2% 1.4rem;
   }
 
   &__label {
@@ -70,7 +71,7 @@
 
   &__radio-buttons {
     display: flex;
-    margin: 1% 0 2% 3%;
+    margin: 1% 0 2% 1.4rem;
   }
 
   &__radio-input {
@@ -92,7 +93,7 @@
   &__volume-measures {
     display: flex;
     flex-direction: column;
-    width: 13%;
+    width: 6rem;
     margin-left: 2%;
 
     & label {
@@ -110,7 +111,7 @@
   }
 
   &__label-top {
-    margin: 0 3%;
+    margin: 0 1.4rem;
   }
 
   &__time-label {

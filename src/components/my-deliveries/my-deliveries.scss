@@ -2,11 +2,10 @@
 
 .my-deliveries {
   display: flex;
-  width: 85vw;
+  width: 81vw;
   margin-left: 15vw;
   margin-top: 7vh;
   padding: 2%;
-  height: 84vh;
 
   &__error-message {
     color: $active-item-color;
@@ -16,6 +15,8 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
   }
 
   &__section {
@@ -24,6 +25,7 @@
     padding: 2%;
     border-radius: 4px;
     margin: 0 2% 2% 0;
+    width: 40%;
   }
 
   &__title {
