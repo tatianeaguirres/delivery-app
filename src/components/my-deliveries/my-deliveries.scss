@@ -1,0 +1,60 @@
+@import '../../styles/colors';
+
+.my-deliveries {
+  display: flex;
+  width: 85vw;
+  margin-left: 15vw;
+  margin-top: 7vh;
+  padding: 2%;
+  height: 84vh;
+
+  &__error-message {
+    color: $active-item-color;
+    font-size: 1.3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__section {
+    border: 1px solid $border-color;
+    background-color: $background-color;
+    padding: 2%;
+    border-radius: 4px;
+    margin: 0 2% 2% 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+
+    & .material-icons {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-top: 0;
+  }
+
+  &__content {
+    margin-left: 1.4rem;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+  }
+
+  &__highlighted-text {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+}
