@@ -82,7 +82,7 @@ const MyDeliveries = () => {
                 <p className='my-deliveries__text'>
                   <span className='my-deliveries__highlighted-text'>Time:</span>{' '}
                   between {delivery.deliveryTime.start} and{' '}
-                  {delivery.pickupTime.end}
+                  {delivery.deliveryTime.end}
                 </p>
               </div>
               <h3 className='my-deliveries__subtitle'>Freight Details</h3>
