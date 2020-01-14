@@ -1,3 +1,6 @@
+@import '../styles/colors';
+
 .App {
   display: flex;
+  background-color: $light-gray-color;
 }

@@ -124,7 +124,8 @@
 
   &__submit {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__submit-button {
@@ -145,25 +146,9 @@
       background-color: rgba($active-color, 0.8);
     }
   }
-}
 
-.input-range {
-  &__slider {
-    background: $dark-gray-color;
-    border: 1px solid $dark-gray-color;
-    height: 0.7rem;
-    margin-left: -0.8rem;
-    margin-top: -0.5rem;
-    width: 0.7rem;
-  }
-
-  &__track {
-    height: 0.2rem;
-    background: $light-gray-color;
-
-    &--active {
-      background: $dark-gray-color;
-    }
+  &__submit-message {
+    color: $active-item-color;
   }
 }
 

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from '@reach/router'
+import NavLink from '../nav-link/nav-link'
 import './menu.scss'
 
 const Menu = () => {
@@ -6,25 +8,25 @@ const Menu = () => {
     <nav>
       <div className='menu'>
         <div className='menu__logo'>
-          <a className='menu__logo-link' href='/'>
+          <Link className='menu__logo-link' to='/'>
             Delivery App
-          </a>
+          </Link>
         </div>
         <ul className='menu__list'>
-          <li className='menu__item--active'>
-            <a className='menu__item-link' href='/'>
+          <li className='menu__item'>
+            <NavLink className='menu__item-link' to='/'>
               <i className='material-icons'>add</i> New Delivery
-            </a>
+            </NavLink>
           </li>
           <li className='menu__item'>
-            <a className='menu__item-link' href='/'>
+            <NavLink className='menu__item-link' to='/my-deliveries'>
               <i className='material-icons'>timeline</i> My Deliveries
-            </a>
+            </NavLink>
           </li>
           <li className='menu__item'>
-            <a className='menu__item-link' href='/'>
+            <Link className='menu__item-link' to='/'>
               <i className='material-icons'>restore</i> History
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
