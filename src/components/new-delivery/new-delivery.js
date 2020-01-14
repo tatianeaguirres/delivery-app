@@ -28,6 +28,10 @@ const NewDelivery = () => {
   })
   const [isSent, setIsSent] = useState(false)
 
+  const handleTimeSlider = (event, setValue) => {
+    setValue(event)
+  }
+
   const handleInputChange = (event, setValue) => {
     setValue(event.target.value)
   }
@@ -100,11 +104,11 @@ const NewDelivery = () => {
         <FormDate
           onPickupDate={event => handleInputChange(event, setPickupDate)}
           pickupDate={pickupDate}
-          onPickupTime={event => handleInputChange(event, setPickupTime)}
+          onPickupTime={event => handleTimeSlider(event, setPickupTime)}
           pickupTime={pickupTime}
           onDeliveryDate={event => handleInputChange(event, setDeliveryDate)}
           deliveryDate={deliveryDate}
-          onDeliveryTime={event => handleInputChange(event, setDeliveryTime)}
+          onDeliveryTime={event => handleTimeSlider(event, setDeliveryTime)}
           deliveryTime={deliveryTime}
         />
         <div className='form__submit'>
