@@ -3,6 +3,7 @@ import './new-delivery.scss'
 import FormRoute from '../form-route/form-route'
 import FormFreight from '../form-freight/form-freight'
 import FormDate from '../form-date/form-date'
+import Map from '../map/map'
 
 const NewDelivery = () => {
   const [countryPickup, setCountryPickup] = useState('Netherlands')
@@ -131,8 +132,7 @@ const NewDelivery = () => {
           )}
         </div>
       </form>
-      {/* TODO */}
-      <div className='map'></div>
+      <Map className='map' />
     </div>
   )
 }
