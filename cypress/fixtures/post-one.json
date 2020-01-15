@@ -1,0 +1,23 @@
+{
+  "countryPickup": "Belgium",
+  "addressPickup": "Address",
+  "countryDelivery": "Belgium",
+  "addressDelivery": "Address",
+  "typeGoods": "other",
+  "volume": "palet",
+  "volumeQuantity": "3",
+  "lenght": "140",
+  "width": "150",
+  "height": "130",
+  "weight": "20",
+  "pickupDate": "2020-03-10",
+  "pickupTime": {
+    "start": "9:00",
+    "end": "13:00"
+  },
+  "deliveryDate": "2020-03-17",
+  "deliveryTime": {
+    "start": "16:45",
+    "end": "19:45"
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "countryPickup": "Netherlands",
+    "addressPickup": "Overblaak 70, 3011 MH Rotterdam",
+    "countryDelivery": "Netherlands",
+    "addressDelivery": "Westermarkt 20, 1016 GV Amsterdam",
+    "typeGoods": "plastic",
+    "volume": "box",
+    "volumeQuantity": "2",
+    "lenght": "200",
+    "width": "260",
+    "height": "400",
+    "weight": "10",
+    "pickupDate": "2020-02-01",
+    "pickupTime": {
+      "start": "8:00",
+      "end": "12:00"
+    },
+    "deliveryDate": "2020-02-02",
+    "deliveryTime": {
+      "start": "8:30",
+      "end": "18:30"
+    }
+  },
+  {
+    "id": 2,
+    "countryPickup": "Netherlands",
+    "addressPickup": "Emmasingel 31, 5611 AZ Eindhoven",
+    "countryDelivery": "Belgium",
+    "addressDelivery": "Wapper 9-11, 2000 Antwerpen",
+    "typeGoods": "textil",
+    "volume": "palet",
+    "volumeQuantity": "1",
+    "lenght": "120",
+    "width": "180",
+    "height": "240",
+    "weight": "20",
+    "pickupDate": "2020-02-05",
+    "pickupTime": {
+      "start": "10:00",
+      "end": "12:00"
+    },
+    "deliveryDate": "2020-02-12",
+    "deliveryTime": {
+      "start": "16:00",
+      "end": "19:00"
+    }
+  }
+]

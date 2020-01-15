@@ -1,0 +1,24 @@
+{
+  "id": 1,
+  "countryPickup": "Netherlands",
+  "addressPickup": "Overblaak 70, 3011 MH Rotterdam",
+  "countryDelivery": "Netherlands",
+  "addressDelivery": "Westermarkt 20, 1016 GV Amsterdam",
+  "typeGoods": "plastic",
+  "volume": "box",
+  "volumeQuantity": "2",
+  "lenght": "200",
+  "width": "260",
+  "height": "400",
+  "weight": "10",
+  "pickupDate": "2020-02-01",
+  "pickupTime": {
+    "start": "8:00",
+    "end": "12:00"
+  },
+  "deliveryDate": "2020-02-02",
+  "deliveryTime": {
+    "start": "8:30",
+    "end": "18:30"
+  }
+}
