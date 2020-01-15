@@ -5,9 +5,9 @@ import FormFreight from '../form-freight/form-freight'
 import FormDate from '../form-date/form-date'
 
 const NewDelivery = () => {
-  const [countryPickup, setCountryPickup] = useState('netherlands')
+  const [countryPickup, setCountryPickup] = useState('Netherlands')
   const [addressPickup, setAddressPickup] = useState('')
-  const [countryDelivery, setCountryDelivery] = useState('netherlands')
+  const [countryDelivery, setCountryDelivery] = useState('Netherlands')
   const [addressDelivery, setAddressDelivery] = useState('')
   const [typeGoods, setTypeGoods] = useState('')
   const [volume, setVolume] = useState('palet')
@@ -34,6 +34,10 @@ const NewDelivery = () => {
 
   const handleInputChange = (event, setValue) => {
     setValue(event.target.value)
+  }
+
+  const handleAddressChange = (event, setValue) => {
+    setValue(event.description)
   }
 
   const submit = event => {
@@ -72,14 +76,16 @@ const NewDelivery = () => {
         <FormRoute
           onCountryPickup={event => handleInputChange(event, setCountryPickup)}
           countryPickup={countryPickup}
-          onAddressPickup={event => handleInputChange(event, setAddressPickup)}
+          onAddressPickup={event =>
+            handleAddressChange(event, setAddressPickup)
+          }
           addressPickup={addressPickup}
           onCountryDelivery={event =>
             handleInputChange(event, setCountryDelivery)
           }
           countryDelivery={countryDelivery}
           onAddressDelivery={event =>
-            handleInputChange(event, setAddressDelivery)
+            handleAddressChange(event, setAddressDelivery)
           }
           addressDelivery={addressDelivery}
         />

@@ -3,6 +3,10 @@
 
 .new-delivery {
   display: flex;
+
+  .google-places-autocomplete {
+    width: 60%;
+  }
 }
 
 .form {
@@ -49,7 +53,7 @@
 
   &__input {
     @include input;
-    width: 60%;
+    width: 90%;
   }
 
   &__small-input {
