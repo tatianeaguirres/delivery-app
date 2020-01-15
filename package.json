@@ -6,7 +6,7 @@
     "server": "json-server --watch ./src/mock/db.json --port 3004",
     "start": "yarn server & react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject"
   },
   "dependencies": {
