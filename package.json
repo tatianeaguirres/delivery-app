@@ -10,7 +10,9 @@
     "eject": "react-scripts eject",
     "cy:open": "cypress open",
     "cy:visual": "cypress run --spec ./cypress/integration/visual-regression.spec.js --browser chrome",
-    "cy:api": "cypress run --spec ./cypress/integration/api.spec.js"
+    "cy:visual-update": "cypress run --spec ./cypress/integration/visual-regression.spec.js --env updateSnapshots=true",
+    "cy:api": "cypress run --spec ./cypress/integration/api.spec.js",
+    "cy:e2e": "cypress run --spec ./cypress/integration/e2e.spec.js"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",

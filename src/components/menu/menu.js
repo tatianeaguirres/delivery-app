@@ -14,17 +14,25 @@ const Menu = () => {
         </div>
         <ul className='menu__list'>
           <li className='menu__item'>
-            <NavLink className='menu__item-link' to='/'>
+            <NavLink
+              className='menu__item-link'
+              id='menu-item-new-delivery'
+              to='/'
+            >
               <i className='material-icons'>add</i> New Delivery
             </NavLink>
           </li>
           <li className='menu__item'>
-            <NavLink className='menu__item-link' to='/my-deliveries'>
+            <NavLink
+              className='menu__item-link'
+              id='menu-item-my-deliveries'
+              to='/my-deliveries'
+            >
               <i className='material-icons'>timeline</i> My Deliveries
             </NavLink>
           </li>
           <li className='menu__item'>
-            <Link className='menu__item-link' to='/'>
+            <Link className='menu__item-link' id='menu-item-history' to='/'>
               <i className='material-icons'>restore</i> History
             </Link>
           </li>

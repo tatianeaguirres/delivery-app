@@ -37,79 +37,133 @@ const MyDeliveries = () => {
                 <i className='material-icons'>local_shipping</i>
                 Delivery number {delivery.id}
               </title>
-              <h3 className='my-deliveries__subtitle'>Pickup</h3>
+              <h3
+                className='my-deliveries__subtitle'
+                id={`my-deliveries__pickup-${delivery.id}`}
+              >
+                Pickup
+              </h3>
               <div className='my-deliveries__content'>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__countryPickup-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Country:
                   </span>{' '}
                   {delivery.countryPickup}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__addressPickup-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Address:
                   </span>{' '}
                   {delivery.addressPickup}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__pickupDate-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>Date:</span>{' '}
                   {formatDate(delivery.pickupDate)}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__pickupTime-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>Time:</span>{' '}
                   between {delivery.pickupTime.start} and{' '}
                   {delivery.pickupTime.end}
                 </p>
               </div>
-              <h3 className='my-deliveries__subtitle'>Delivery</h3>
+              <h3
+                className='my-deliveries__subtitle'
+                id={`my-deliveries__delivery-${delivery.id}`}
+              >
+                Delivery
+              </h3>
               <div className='my-deliveries__content'>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__countryDelivery-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Country:
                   </span>{' '}
                   {delivery.countryDelivery}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__addressDelivery-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Address:
                   </span>{' '}
                   {delivery.addressDelivery}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__deliveryDate-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>Date:</span>{' '}
                   {formatDate(delivery.deliveryDate)}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__deliveryTime-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>Time:</span>{' '}
                   between {delivery.deliveryTime.start} and{' '}
                   {delivery.deliveryTime.end}
                 </p>
               </div>
-              <h3 className='my-deliveries__subtitle'>Freight Details</h3>
+              <h3
+                className='my-deliveries__subtitle'
+                id={`my-deliveries__freight-${delivery.id}`}
+              >
+                Freight Details
+              </h3>
               <div className='my-deliveries__content'>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__typeGoods-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>Type:</span>{' '}
                   {delivery.typeGoods}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__volume-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Volume:
                   </span>{' '}
                   {delivery.volume}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__volumeQuantity-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Quantity:
                   </span>{' '}
                   {delivery.volumeQuantity}
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__weight-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Weight:
                   </span>{' '}
                   {delivery.weight}kg
                 </p>
-                <p className='my-deliveries__text'>
+                <p
+                  className='my-deliveries__text'
+                  id={`my-deliveries__measures-${delivery.id}`}
+                >
                   <span className='my-deliveries__highlighted-text'>
                     Measures:
                   </span>{' '}
