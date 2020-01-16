@@ -6,13 +6,13 @@
     "server": "json-server --watch ./src/mock/db.json --port 3004",
     "start": "yarn server & react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
-    "cy:open": "cypress open",
-    "cy:visual": "cypress run --spec ./cypress/integration/visual-regression.spec.js --browser chrome",
-    "cy:visual-update": "cypress run --spec ./cypress/integration/visual-regression.spec.js --env updateSnapshots=true",
-    "cy:api": "cypress run --spec ./cypress/integration/api.spec.js",
-    "cy:e2e": "cypress run --spec ./cypress/integration/e2e.spec.js"
+    "test:unit": "react-scripts test --watchAll",
+    "test:visual": "cypress run --spec ./cypress/integration/visual-regression.spec.js --browser chrome",
+    "test:visual-update": "cypress run --spec ./cypress/integration/visual-regression.spec.js --env updateSnapshots=true",
+    "test:api": "cypress run --spec ./cypress/integration/api.spec.js",
+    "test:e2e": "cypress run --spec ./cypress/integration/e2e.spec.js",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
